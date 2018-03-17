@@ -1,0 +1,84 @@
+		body{
+			font-family: "Lucida Console", Lucida, Monospace;
+		}
+
+		.acme{
+			background-color: red;
+			color: white;
+			text-align: center;
+			border-radius: 20px;
+		}
+
+		h1{
+			padding-top: 20px;
+			font-size: 700%;
+			margin-bottom: 0px;
+		}
+
+		.corporation{
+			margin-top: 0px;
+			padding-bottom: 20px;
+			font-size: 200%;
+		}
+
+		h2{
+			background-color: red;
+			color: white;
+			font-size: 200%;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			text-align: center;
+			border-radius: 20px;
+			margin-left: 33%;
+			margin-right: 33%;	
+		}
+
+		.menu{
+			background-color: #FFBF00;
+			color: white;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			position: center;
+			border-radius: 20px;
+		}
+
+		li{
+			display: inline;
+			padding-right: 2%;
+		}
+
+		.btn {
+		    border: none;
+		    color: white;
+		    padding: 14px 28px;
+		    cursor: pointer;
+		    background-color: #ff9800;
+		    border-radius: 20px;
+		}
+
+		.btn:hover {
+			background: #e68a00;
+		}
+
+		.formulario {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			background-color: #FFBF00;
+			color: white;
+			font-size: 100%;
+			margin-left: 33%;
+			margin-right: 33%;	
+		}
+
+		.enviar {
+			border: none;
+		    color: white;
+		    padding: 14px 28px;
+		    cursor: pointer;
+		    background-color: red;
+		    border-radius: 20px;
+		}
+
+		.enviar:hover {
+			background: #B40404;
+		}
