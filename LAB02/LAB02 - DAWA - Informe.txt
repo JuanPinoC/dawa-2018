@@ -1,0 +1,130 @@
+Desarrollo de Aplicaciones Web Avanzado 
+Laboratorio 02
+
+Alumno: Pino Cáceres, Juan Manuel
+Grupo: B
+
+2.3. Error en variables.js:
+	Error: "arreglo_parametros is not defined"
+	La variable arreglo_parametros no esta definida, para solucionar
+	el error, declaramos la variable antes de ejecutar la función
+	createServer.(Captura del error - archivo: 2.3).
+
+2.4. Se adjunta captura - archivo:  2.4.
+
+2.5. Valores de las variables al finalizar ejecución:
+	- arreglo_parametros:{nombre=batman}
+	- parametros:{nombre}
+	- valores:{batman}
+
+2.6. Que se realizó y que se puede realizar al manipular el request:
+	Se obtuvo la url completa y utilizando la función split, la 			dividimos a partir del "?" para poder obtener los parametros
+	que se envian a través de dicha url, en un arreglo se almacenan
+	los nombres de los parametros y en otro sus valores, finalmente
+	se reemplazan los valores en el html antes de mostrarlo.
+
+3.3. Se adjunta captura - archivo:  3.3.
+
+3.4. Indique como mejoraría la función que retorna las variables de la URL.
+	Eliminando las variables innecesarias: url_data, parametro y 
+	param_data.(Se adjunta captura - archivo: 3.4).
+
+3.8. Indique cunado es util reutilizar variables:
+	Es util cuando se requiere utilizar varios objeto con propiedades
+	similares, de manera que en vez de crear una variable cada vez y 	
+	dichas propiedades simplemente reutilizamos el modelo que ya se
+	tiene.
+
+4.1. Módulo de hora en distintos formatos(archivo: formatosHora.js)
+
+4.2. Módulo de días faltantes para una fecha(archivo: diasPara.js)
+	(formato: url?fecha=dd-mm-yyyy)
+
+4.3. Enrutador.(archivo: Enrutador.js).
+
+5.2. Se adjunta captura - archivo:  5.2.
+
+5.3. Se adjunta captura - archivo:  5.3.
+
+5.4. mes.js captura - archivo: 5.4.
+
+5.9. navidad.js captura - archivo: 5.9.
+
+6.3. Observaciones al ejecutar: node debug debug.js
+	Con debug se inicia una inspección del archivo especificado,
+	en el se hacen pausas llamadas breakpoints y es posible observar
+	el estado de las variables.
+
+6.6. Se adjunta captura - archivo:  6.6.
+
+--------------------------------------------------------------------------
+
+Tarea
+
+1.Servidor: tarea_server.js
+	a. Calculadora. 
+		Archivos: calculadora.js - calculadora.html
+	b. Procesador de texto.
+		Archivos: procesador.js - procesador.html
+
+3.Funcionalidad de node inspector y ejemplo:
+	Node inspector es un debugger con interfaz gráfica en el navegador,
+	es bastante parecido a node-debug que ya viene incluido en node.
+	Para instalarlo utilizamos NPM y para ejecutarlo utilizamos los
+	comandos:
+
+	>node-inspector
+	>node --debug-brk archivo.js
+	
+	La interfaz posee en el lado izquierdo el explorador de archivos,
+	en el centro el archivo a debuggear y en el lado derecho las
+	variables, los breakpoint, etc.
+	(Captura de la interfaz: node-inspector.jpg)
+--------------------------------------------------------------------------
+
+Conclusiones:
+
+	-Aprendimos a manejar datos de formulario pasados al servidor por
+	 método GET, es decir, por URL, utilizando split, para dividir una
+	 cadena en varios elementos de un array dado un caracter referente,
+	 y almacenando los datos como nombre y valor en arreglos.
+
+	-Aprendimos a crear módulos y exportarlos, esto es util cuando en
+	 una aplicación hacemos uso de un proceso o función varias veces,
+	 cuando esto sucede, el código se separa en un módulo diferente
+	 y se referencia con require de forma que evitamos la repetición de 	 	 código.
+	
+	-Creamos funciones que trabajan con variables de fecha como date o
+	 timestamp, observamos las distintas formas de obtener la fecha que
+	 hay en javascript, obtuvimos los días en formato de texto(Mon,Tue,
+	 etc.), y ya que date es una cantidad de milisegundos desde el 1 de
+	 Enero de 1970, pudimos obtener la cantidad de días faltantes para
+	 fechas específicas utilizando una simple operación aritmetica.
+	
+	-Reconocimos el REPL(Read-Eval-Print-Loop) de Node y sus respectivas
+	 funciones, utilizamos .load para cargar módulos, .save para guardar
+	 el código escrito en el shell en un archivo y realizamos operaciones
+	 básicas con strings y números para familizarnos con el mismo.
+ 
+	-Utilizamos debugger para realizar el proceso de debugging de un
+	 archivo, observamos que la función debug se detiene en cada función,
+	 y cuando se quiere colocar un breakpoint utilizamos debugger; en el
+	 código analizado previamente, para avanzar entre lineas utilizamos
+	 next, cuando deseamos ver el estado de una variable utilizamos watch
+	 y watchers.
+	
+	-Desarrollamos un módulo que realiza operaciones aritmeticas básicas
+	 cuando pasamos parámetros por URL, reutilizando el módulo parse_vars.js
+	 creado previamente en el laboratorio.
+
+	-Desarrollamos el procesador de texto que utiliza el módulo core de
+	 node: querystring para recibir los datos pasados por método POST y
+	 convertirlos a JSON para poder acceder a los parámetros.
+
+	-Instalamos y utilizamos node-inspector que es una forma de debugger
+	 con interfaz gráfica en el navegador, así mismo, es importante
+	 resaltar que node-inspector no puede instalarse en Node 8.x que es
+	 la versión actual de Node, puesto que ya no es soportado.
+
+
+

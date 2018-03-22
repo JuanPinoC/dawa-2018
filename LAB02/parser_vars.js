@@ -4,15 +4,12 @@ function parse_vars(req){
 	valores = [];
 
 	if(req.url.indexOf('?')>0){
-		var url_data = req.url.split('?');
-		var arreglo_parametros = url_data[1].split('&');
+		var arreglo_parametros = req.url.split('?')[1].split('&');
 	}
 
 	for(var i=0; i<arreglo_parametros.length;i++){
-		var parametro = arreglo_parametros[i];
-		var param_data = parametro.split('=');
-		parametros[i] = param_data[0];
-		valores[i] = param_data[1];
+		parametros[i] = arreglo_parametros[i].split('=')[0];
+		valores[i] = arreglo_parametros[i].split('=')[1];
 	}
 
 	return {

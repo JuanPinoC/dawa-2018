@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<center>
+	<h1>Calculadora</h1>
+	<form method="GET" action="calculadora">
+		<p>Número 1: <input type="number" id="n1" name="n1"></p>
+		<p>Número 2: <input type="number" id="n2" name="n2"></p>
+		<p>
+			<select id="op" name="op">
+				<option value="s">Sumar</option>
+				<option value="r">Restar</option>
+		 		<option value="m">Multiplicar</option>
+		 		<option value="d">Dividir</option>
+			</select>
+		</p>
+		<button type="submit">Calcular</button>
+
+		<h2>Respuesta</h2>
+		<h2>{valor}</h2>
+	</form>
+	</center>
+</body>
+</html>

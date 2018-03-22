@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Procesador de Texto</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<center>
+	<h1>Procesador de Texto</h1>
+	<form method="POST" action="procesador">
+		<p>Texto: <textarea id="txt" name="txt">{valor}</textarea>
+		
+		<p>
+			<select id="op" name="op">
+				<option value="dividir">Dividir por palabra</option>
+				<option value="extraer">Extraer texto:</option>
+				<option value="eliminar">Eliminar espacios</option>
+				<option value="capitalizar">Capitalizar</option>
+				<option value="minuscula">Minúsculas</option>
+				<option value="mayuscula">Mayúsculas</option>
+				<option value="contar">Contar caracteres</option>
+			</select>
+		</p>
+		<p>
+			Texto a extraer (Opcional): <input id="ext" name="ext">
+		</p>
+		
+		<button type="submit">Procesar</button>
+
+	</form>
+	</center>
+</body>
+</html>
