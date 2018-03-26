@@ -1,0 +1,3 @@
+7.1. Inserta un eventListeners, una función que permite monitorear los clicks sobre los elementos con la etiqueta button; cada vez que se hace click sobre un elemento, se imprime un mensaje en la consola de comandos "Hiciste click en el elemento" y el número del elemento.
+
+7.2.
