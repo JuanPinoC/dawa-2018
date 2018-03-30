@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Click Event Listener</title>
+</head>
+<body>
+	<button id="1">Button 1</button>
+	<button id="2">Button 2</button>
+	<h1 id="clicks"></h1>
+	<script type="text/javascript">
+		function addClickListener(elemento, id){
+			elemento.addEventListener('click',function(){
+				//alert('You clicked element #' + id);
+				document.getElementById("clicks").innerHTML = 
+				'You clicked element #' + id;
+			});
+		}
+		
+		var nodes = document.getElementsByTagName('button');
+			for(var i = 0; i < nodes.length; i++){
+				addClickListener(nodes[i],nodes[i].getAttribute('ID'));
+			}
+	</script>
+</body>
+</html>

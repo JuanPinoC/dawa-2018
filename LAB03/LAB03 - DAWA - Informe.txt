@@ -1,0 +1,159 @@
+Desarrollo de Aplicaciones Web Avanzado 
+Laboratorio 03
+
+Alumno: Pino Cáceres, Juan Manuel
+Grupo: B
+
+2.1. Adjuntar captura de comando npm y versión del mismo.
+	La versión de npm es npm 5.6.0. (Captura Adjunta: 2.1.JPG).
+
+3.3. Pasos de creación del package.json y explicación:
+	Al escribir el comando "npm init" para iniciar el asistente,
+	se solicita en primer lugar el nombre del proyecto, el cual
+	asignamos como "tecsup-2017-pino-caceres", y presionamos enter,
+	seguidamente se solicita la versión, escribimos 0.0.1 y enter,
+	la descripcion no es obligatoria así que la dejamos en blanco,
+	el punto de entrada(entry point) lo dejamos por defecto 		como index.js, luego se nos solicita test command, repositorio
+	git y palabras clave, los cuales dejamos en blanco,finalmente 		se solicita el autor:"juan pino". Y se muestra el JSON a
+	crearse para verificar los datos.(Captura Adjunta: 3.3.1.JPG
+	y 3.3.2.JPG).
+
+3.4. Contenido del package.json:
+	3.4.JPG.
+
+4.2. Cambios en la carpeta proyecto:
+	Se creo la carpeta "underscore" en node_modules con el
+	contenido de dicho paquete dentro de ella.
+	(Captura Adjunta: 4.2.1.JPG y 4.2.2.JPG)
+
+4.4. Captura de package.json y explicación:
+	Se agrego en dependencias, el paquete underscore 1.8.3,
+	todos los paquetes que instalemos en este proyecto serán
+	agregados al package.json.(Captura Adjunta: 4.4.JPG)
+
+4.7. Interpretar resultados index.js:
+	Se realizá un recorrido por el arreglo con la función
+	each() del paquete underscore, y se imprime cada elemento
+	devuelto.(Captura Adjunta: 4.7.JPG)
+
+4.9. Captura Adjunta: 4.9.JPG
+
+4.10. Captura Adjunta: 4.10.JPG
+
+4.12. Explicación, uso de chain:
+	En primer lugar busca en el array los empleados cuyo puesto		("designation") sea "SSE",esto con la función filter, y
+	luego, ordena el resultado con map, de manera que se muestre
+	el nombre del empleado con la etiquete name y el id del
+	empleado con la etiqueta id.(Captura Adjunta: 4.12.JPG)
+
+5.5. Captura y mejora del código:
+	El código se puede mejorar declarando las variables en el
+	momento que se utiliza y declarando el param_encontrados.length
+	en el for y guardarlo en una variable para no compararlo en
+	cada iteración.(Captura adjunta: 5.5.JPG)
+
+6.5. Inicio de sesión.(Captura adjunta: 6.5.JPG)
+
+6.6. Publicación.(Captura adjunta: 6.6.JPG)
+
+6.8. Explicación y solución del error:
+	Se genera un warning, debido a que no hay un package.json,
+	para solucionarlo agregamos el package.json con npm init.
+	(Captura adjunta: 
+		Error: 6.8.1.JPG - Package.json: 6.8.2.JPG)
+
+6.9. Código de pruebas: otro_proyecto\index.js
+
+7.1. Explicación del código:
+	Inserta un eventListeners, una función que permite monitorear
+	los clicks sobre los elementos con la etiqueta button; cada
+	vez que se hace click sobre un elemento, se imprime un
+	mensaje en la consola de comandos "Hiciste click en el
+	elemento" y el número del elemento.
+
+7.2. Código implementado y solución:
+	El código se implementa como script en un html, además fue
+	necesario colocar parte del código en una función que asigna
+	el EventListener dados el elemento y un id que se obtiene
+	con getAttribute, finalmente, se reemplaza el console.log
+	y se muestra el mensaje en un <H1> que se modifica.
+	(Código Adjunto: clickListener.html)
+
+7.3. Explicación del código:
+	Según el código, la función printing imprime primero "1" y
+	luego asigna un "descanso" de 1000 milisegundos con 			setTimeout, para luego imprimir en la consola "2", después 
+	asigna un descanso de 0 milisegundos antes de imprimir "3"
+ 	y finalmente imprime "4". Sin embargo, al ejecutar la función 		el resultado es "1 4 3 2", debido a que javascript es
+	asincrono, esto quiere decir que después de imprimir "1",
+	espera 1000 ms para imprimir "2" pero mientras tanto continua
+	ejecutando el código y hace una pausa muy pequeña antes de
+	imprimir "3" debido a que se utiliza la función setTimeout
+	con 0 milisegundos, pero esta minima pausa permite que
+	se imprima "4" antes del "3" y finalmente al completarse
+	los 1000 ms, se imprime "2".
+
+7.5. Cuando es util utilizar operadores del corto circuito:
+	Es util cuando se reciben parametros en una función y hay
+	que comprobar si son nulos antes de utilizarlos en la función,
+	por otro para no crear variables vacias, y en su lugar tener,
+	variables opcionales.
+
+7.8. Archivo adjunto: futbolista.js
+
+7.9. Archivo adjunto: jugador.js
+
+7.10. Herencia parasitaria:
+	La herencia parasitaria consiste en dado un objeto con sus
+	atributos, este puede ser instanciado desde el constructor de
+	otro, donde el objeto que hereda envia los atributos comunes
+	al padre y asigna los demas al objeto devuelto, para
+	finalmente retornar este objeto ya con todos sus atributos.
+	(captura: 7.10.JPG - Archivo adjunto: persona.js)
+
+8.2. Archivo adjunto: mayorNumero.js - captura: 8.2.JPG.
+
+8.3. Archivo adjunto: albumFavorito.js - captura: 8.3.JPG.
+
+8.4. Archivo adjunto: sumaMuchasVariables.js - captura: 8.4.JPG.
+
+8.5. Archivo adjunto: albumMasTocado.js - captura: 8.5.JPG.
+
+8.6. Archivo adjunto: esPrimo.js - captura: 8.6.JPG.
+
+8.7. Archivo adjunto: quickSort.js
+	-Captura: 8.7.JPG
+	-Test: testQuickSort.js
+
+Conclusiones:
+-	En este laboratorio nos familiarizamos más con Javascript,
+	su sintaxis y funciones.
+-	Creamos un proyecto con su respectivo package.json a través
+	de comandos npm e instalamos un paquete como dependecia para
+	hacer uso de sus funciones en nuestro código.
+-	Luego, modificamos el proyecto para su funcinamiento como
+	paquete y lo publicamos en npm para lo cual fue necesario
+	crear una cuenta, después probamos el funcionamiento del
+	paquete publicado en otro proyecto como dependencia.
+-	Aprendimos a utilizar algunas de las funciones de underscore,
+	el cual nos permite recorrer arreglos con la función each,
+	recorrer un arreglo de documentos con map y realizar busquedas
+	encadenadas con chain.
+-	Por otro lado, la función filter permite buscar coincidencias
+	entre los documentos y la función map, permite escoger que
+	datos deseamos mostrar.
+-	Desarrollamos diversas funciones haciendo uso de javascript y
+	modificamos las funciones propuestas para su correcto
+	funcionamiento, además, optimizamos el código cuando fue
+	necesario.
+-	Observamos que al agregar un script en un HTML, la mejor
+	práctica es colocarlo al final de la página puesto que las
+	etiquetas con las que interactua deben cargarse primero.
+-	Al hacer uso de la función seTimeout, determinamos que el
+	uso de javascript es muy diferente a otros lenguajes debido a
+	que es asincrono y las funciones se ejecutan incluso mientras
+	existe una ya en ejecución.
+-	Aprendimos a implementar objetos en javascript para poder
+	instanciarlos y hacer uso de sus funciones asi como obtener
+	sus atributos. También, entendimos el funcionamiento de la
+	herencia parasitaria y el hecho de que no existen objetos o
+	atributos privados o protegidos propiamente.

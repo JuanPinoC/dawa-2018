@@ -8,8 +8,8 @@ if (typeof exports !== 'undefined'){
 	root.param_replacer = param_replacer;
 }
 
-
 /*
+
 var param_replacer = require('./lib/replace');
 
 var objetivo = "%hello% %world%! -- %world% %hello%!";
