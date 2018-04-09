@@ -1,0 +1,49 @@
+Desarrollo de Aplicaciones Web Avanzado 
+Laboratorio 04
+
+Alumno: Pino Cáceres, Juan Manuel
+Grupo: B
+
+2.6.Opciones de express: Captura adjunta: 2.6.JPG.
+
+2.7.Generar la aplicación en express: Captura adjunta: 2.7.JPG.
+
+2.11.Ejecución miapp: Captura adjunta: 2.11.JPG. 
+
+2.13.Cambios que se buscan al utilizar middlewares para captura de URL con diferentes métodos HTTP.
+	Se busca que cuando por ejemplo se utiliza GET, el servidor muestra algo en la página web, y en el caso
+	de POST para enviar datos de un formulario que no se mostraran en la URL, de la misma forma para put y
+	delete, el objetivo es diferenciar estos métodos para los distintos procesos.
+	
+2.18.Capturas diferentes métodos en POSTMAN:
+	GET: Captura adjunta: 2.18.1.JPG.
+	POST: Captura adjunta: 2.18.2.JPG.
+	PUT: Captura adjunta: 2.18.3.JPG.
+	DELETE: Captura adjunta: 2.18.4.JPG.
+
+2.21.Carga de archivos por URL:
+	Captura adjunta: 2.21.1.JPG.
+	Captura adjunta: 2.21.2.JPG. 
+	Captura adjunta: 2.21.3.JPG.
+
+2.24. Existencia de archivos:
+	Captura adjunta: 2.24.1.JPG.
+	Captura adjunta: 2.24.2.JPG.
+	Captura adjunta: 2.24.3.JPG.
+
+2.26.Captura adjunta: 2.6.JPG.
+
+3.1.Proyecto: Baches_y_Cachibaches
+
+Conclusiones:
+-	En este laboratorio aprendimos a instalar un proyecto de express utilizando npm, con el comando ---save
+	para guardar la dependencia en el package.json del proyecto.
+-	Utilizamos Postman para probar los distintos métodos HTTP del proyecto y mostrar diferentes resultados 		para cada uno de ellos.
+-	Aprendimos a manejar las rutas del navegador desde nuestra  index.js en nuestra aplicación de express y 	utilizamos diferentes recursos como imagenes, css y scripts con  "app.use".
+-	Manejamos los errores que pueden presentarse al momento de ingresar a la página, esto sucede cuando 	el estado del request es 4XX para recursos no encontrados, y 5XX para errores en el servidor.
+-	Utilizamos nuestros conocimietos sobre CSS para mejorar la apariencia de la landing-page de nuestro
+	proyecto con estilos y animaciones, sin el uso de Bootstrap o plantillas.
+-	
+
+
+
