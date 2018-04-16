@@ -1,0 +1,62 @@
+Desarrollo de Aplicaciones Web Avanzado 
+Laboratorio 05
+
+Alumno: Pino Cáceres, Juan Manuel
+Grupo: B
+
+3.3. Instalación de mongoose y body-parser (Captura Adjunta: 3.3.JPG)
+
+3.5. Las lineas de app.get y los 3 app.post, el primero,show, cosrresponde al listado, el segundo,create, corresponde al registro de datos, el tercero,update, corresponde a la modificación de datos, y el cuarto, delete, a la eliminación de datos.
+
+3.9. Listado de datos con POSTMAN REST.(Captura Adjunta: 3.9.JPG)
+
+3.10. Capturas de operaciones:
+	-Find (3.10-find.JPG)
+	-List (3.10-list.JPG)
+	-Create (3.10-create.JPG)
+	-Update (3.10-update.JPG)
+
+3.15. Captura Adjunta: 3.15.JPG
+
+3.18. Captura Adjunta: 3.18.JPG
+
+3.19. Login:
+	-Modelo: Server\Models\user.js
+	-Vista: Server\Views\login.jade
+
+3.20. CRUD de productos:
+	-Modelo: Server\Models\prod.js
+	-Vista List: Server\Views\table.jade 
+	-Vista Create: Server\Views\create.jade
+	-Vista Update: Server\Views\Update.jade
+
+Tarea: CRUD de tres colecciones del proyecto.
+	-Aplicación: Carpeta Adjunta: Tarea
+	-Base de Datos del Proyecto: Base de Datos.js
+	-Estructura: Estructura_App.JPG
+	-Colecciones: Colecciones_App.JPG
+	-Colecciones usadas:
+		- Usuario_App.JPG
+		-Categoria_App.JPG
+		-Plan_App.JPG
+
+Conclusiones:
+-	En este laboratorio aprendimos a utilizar Mongoose para poder interactuar con nuestra base de 		datos de MongoDB desde nuestra aplicación de Express e implementar el CRUD(Create, Read, 		Update, Delete) de los datos.
+-	Implementamos Jade para las vistas del proyecto, Jade nos permite utilizar HTML sin necesidad
+	de usar etiquetas para abrir y cerrar un elemento, hace uso de la indentación y además permite
+	el uso algunas funciones de javascript.
+-	Para poder crear los esquemas de un documento, primero es necesario conectarnos a la base
+	de datos y declarar una variable de tipo esquema que contiene los nombres de los campos y el
+	tipo de dato de cada uno de estos campos.
+-	Las operaciones de CRUD, las ubicamos en el module.exports para poder acceder a ellas desde
+	fuera, para mostrar los datos realizamos un find() sin parametros y enviamos los datos devueltos a
+	la vista renderizada en Jade.
+-	Para la creación de datos, creamos un JSON en una variable item y le enviamos esta al esquema
+	previamente creado para que lo guarde en la base de datos con save(item).
+-	Para realizar una modificación realizamos una busqueda y enviamos el ID del documento, lo que
+	retorna un objeto al cual le insertamos los datos recibidos y guardamos. 
+-	Para eliminar hacemos uso de la función remove con el id del documento y después de realizar
+	cualquier operación del CRUD, mostramos nuevamente el listado de documentos.
+-	En Jade podemos utilizar sentencias if y else, o recorrer un array con un for, en el laboratorio
+	utilizamos esto para mostrar cada dato del conjunto enviado en un JSON a la vista de listado.
+

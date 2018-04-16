@@ -1,0 +1,37 @@
+html
+	head
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title Baches y Cachibaches
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+	body
+		.main.container
+			.row
+				.col-md-6.col-md-offset-3
+					h1.display-4.m-b-2 Planes
+					hr
+					a.btn.btn-success.btn-lg(href='../plan/create') Nuevo Plan
+		hr
+		table.table
+			thead
+				tr
+					th ID
+					th Porcentaje
+					th Tiempo (Días)
+					th Precio
+					th Opciones
+			tbody
+				for item in data
+					tr.form-group
+						td= item._id
+						td= item.porcentaje + "%"
+						td= item.tiempo
+						td= item.precio + "%"
+						
+						td
+							a.btn.btn-warning(href='../plan?_id='+item._id) Editar
+							
+							form(method='POST' action='../plan/delete')
+								div.form-group
+									input#id.form-control(type='hidden' name='_id' value=item._id)
+								div.form-group
+									button.btn.btn-danger(type='submit') Eliminar

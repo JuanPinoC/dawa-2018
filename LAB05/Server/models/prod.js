@@ -10,20 +10,28 @@ var producto_schema = new Schema({
 });
 
 prod_model = mongoose.model('producto',producto_schema,'producto');
+
+function listado(req,res){
+	prod_model.find({},function(err,items){
+			if(!err){
+				//res.send(items);
+				console.log(items);
+				res.render('table',{data: items});
+			}else{
+				return console.log(err);
+			}
+	});
+}
+
 module.exports = {
 	show: function(req, res){
 		if(req.query._id==null){
-			prod_model.find({},function(err,items){
-				if(!err){
-					res.send(items);
-				}else{
-					return console.log(err);
-				}
-			});
+			listado(req,res);
 		}else{
 			prod_model.findOne({_id: req.query._id},function(err,items){
 				if (!err) {
-					res.send(items);
+					//res.send(items);
+					res.render('update',{data: items});
 				}else{
 					return console.log(err);
 				}
@@ -36,22 +44,28 @@ module.exports = {
 			descripcion: req.body.descripcion,
 			precio: req.body.precio
 		};
-		var nuevo = new prod_model(item).save();
-		res.send(nuevo);
+		var nuevo = new prod_model(item).save({},function(){
+			//res.send(nuevo);
+			listado(req,res);
+		});
 	},
 	update: function(req,res){
 		prod_model.findOne({_id: req.body._id},function(err,producto){
 			producto.nombre = req.body.nombre;
 			producto.descripcion = req.body.descripcion;
 			producto.precio = req.body.precio;
-			producto.save();
-			res.send(producto);
+			producto.save({},function(){
+				//res.send(producto);
+				listado(req,res);
+			});
 		});
 	},
 	delete: function(req,res){
 		prod_model.findOne({_id: req.body._id},function(err,producto){
-			producto.remove();
-			res.send({status:true});
+			producto.remove({},function(){
+				//res.send({status:true});
+				listado(req,res);
+			});
 		});
 	},
 };

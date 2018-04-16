@@ -1,0 +1,26 @@
+html
+	head
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title Baches y Cachibaches
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+	body
+		.main.container
+			.row
+				.col-md-6.col-md-offset-3
+					h1.display-4.m-b-2 Editar Plan
+					form#formulario(method='POST' action='/plan/update')
+						input(type='hidden' name='_id' id='_id' value=data._id)
+						div.form-group
+							label(for='porcentaje') Porcentaje:
+							input#porcentaje.form-control(type='number' name='porcentaje' max='100' required value=data.porcentaje)
+						div.form-group
+							label(for='tiempo') Tiempo(Días):
+							input#tiempo.form-control(type='number' name='tiempo' max='30' required value=data.tiempo)
+						div.form-group
+							label(for='precio') Precio:
+							input#precio.form-control(type='number' name='precio' max='100' required value=data.precio)
+						div.form-group
+							button.btn.btn-success(type='submit') Grabar
+						div.form-group
+							a.btn.btn-danger(href='../plan') Cancelar

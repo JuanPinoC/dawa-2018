@@ -1,0 +1,55 @@
+html
+	head
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title Baches y Cachibaches
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+	body
+		.main.container
+			.row
+				.col-md-6.col-md-offset-3
+					h1.display-4.m-b-2 Crear Categoria
+					form#formulario(method='POST' action='/categoria')
+						div.form-group
+							label(for='nombre') Nombre:
+							input#nombre.form-control(type='text' name='nombre' required)
+						div.form-group
+							label(for='subcategorias') Subcategorias:
+							div#subcats.form-group
+						div.form-group
+							button.btn.btn-success(type='submit') Grabar
+						div.form-group
+							a.btn.btn-danger(href='../categoria') Cancelar
+
+					div.form-group
+						button#agregar.btn.btn-primary Agregar Subcategoria
+					div.form-group
+						button#quitar.btn.btn-danger Quitar Subcategoria
+
+		script.
+			var n = 0, arr = [];
+			$("#agregar").click(agregar);
+			$("#quitar").click(quitar);
+			
+			function agregar(){
+				n++;
+				
+				for(var i = 1;i<n;i++){
+					arr.push($("#subcat"+i).val());
+				}
+
+				$("#subcats").html($("#subcats").html()+"<div id='subcatdiv"+n+"'>"+
+														"<p>Subcategoria "+n+": </p>"+
+														"<input class='form-control' type='text' id='subcat"+n+"' name='subcat"+n+"' form='formulario' required/>"+
+														"<br></div>");
+
+				for(var i = 1;i<n;i++){
+					$("#subcat"+i).val(arr[i-1]);
+				}
+				arr = [];
+			};
+
+			function quitar(){
+				$("#subcatdiv"+n).remove();
+				n--;
+			}

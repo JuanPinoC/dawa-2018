@@ -1,0 +1,96 @@
+html
+	head
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title Baches y Cachibaches
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+	body
+		.main.container
+			.row
+				h1.display-4.m-b-2 Crear Usuario
+				form#formulario(method='POST' action='/usuario')
+					div.col-sm-6
+						div.form-group
+							label(for='nombres') Nombres:
+							input#nombres.form-control(type='text' name='nombres' required)
+						div.form-group
+							label(for='apellidos') Apellidos:
+							input#apellidos.form-control(type='text' name='apellidos' required)
+						div.form-group
+							label(for='telefono') Telefono:
+							input#telefono.form-control(type='number' name='telefono' required)
+						div.form-group
+							label(for='celular') Celular:
+							input#celular.form-control(type='number' name='celular' required)
+						div.form-group
+							label(for='ciudad') Ciudad:
+							input#ciudad.form-control(type='text' name='ciudad' required)
+						div.form-group
+							label(for='direccion') Dirección:
+							input#direccion.form-control(type='text' name='direccion' required)
+					div.col-sm-6
+						div.form-group
+							label(for='email') E-mail:
+							input#email.form-control(type='email' name='email' required)
+						div.form-group
+							label(for='contrasenia') Contraseña:
+							input#contrasenia.form-control(type='text' name='contrasenia' required)
+						div.form-group
+							label(for='tarjeta') Tarjetas:
+							div#tarjetas.form-group
+				div.col-sm-6
+				div.col-sm-3
+					div.form-group
+						button#agregar.btn.btn-primary Agregar Tarjeta
+					div.form-group
+						button#quitar.btn.btn-danger Quitar Tarjeta
+				div.col-sm-6
+					br
+					br
+					br
+				div.col-sm-3
+				div.col-sm-3
+					div.form-group
+						button.btn.btn-success.btn-lg(form='formulario' type='submit') Grabar
+					div.form-group
+						a.btn.btn-danger.btn-lg(form='formulario' href='../usuario') Cancelar
+
+		script.
+			var n = 0, arr1 = [], arr2 = [],arr3 = [], arr4 = [];
+			$("#agregar").click(agregar);
+			$("#quitar").click(quitar);
+			
+			function agregar(){
+				n++;
+				
+				for(var i = 1;i<n;i++){
+					arr1.push($("#t_num"+i).val());
+					arr2.push($("#t_fec_exp"+i).val());
+					arr3.push($("#t_cod_seg"+i).val());
+					arr4.push($("#t_clave"+i).val());
+				}
+
+				$("#tarjetas").html($("#tarjetas").html()+"<div id='tarjetadiv"+n+"'><h3>Tarjeta "+n+"</h3>"+
+														"<p>Número de tarjeta: "+
+														"<input class='form-control' type='text' id='t_num"+n+"' name='t_num"+n+"' form='formulario' required/></p>"+
+														"<p>Fecha de expiración: "+
+														"<input class='form-control' type='text' id='t_fec_exp"+n+"' name='t_fec_exp"+n+"' form='formulario' required/></p>"+
+														"<p>Código de Seguridad: "+
+														"<input class='form-control' type='text' id='t_cod_seg"+n+"' name='t_cod_seg"+n+"' form='formulario' required/></p>"+
+														"<p>Clave de la tarjeta: "+
+														"<input class='form-control' type='text' id='t_clave"+n+"' name='t_clave"+n+"' form='formulario' required/></p>"+
+														"<br></div>");
+
+				for(var i = 1;i<n;i++){
+					$("#t_num"+i).val(arr1[i-1]);
+					$("#t_fec_exp"+i).val(arr2[i-1]);
+					$("#t_cod_seg"+i).val(arr3[i-1]);
+					$("#t_clave"+i).val(arr4[i-1]);
+				}
+				arr1 = [];arr2 = []; arr3 = []; arr4 = [];
+			};
+
+			function quitar(){
+				$("#tarjetadiv"+n).remove();
+				n--;
+			}
