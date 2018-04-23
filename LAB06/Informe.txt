@@ -1,0 +1,76 @@
+Desarrollo de Aplicaciones Web Avanzado 
+Laboratorio 06
+
+Alumno: Pino Cáceres, Juan Manuel
+Grupo: B
+
+1.7. Interfaz. Captura Adjunta: 1.7.JPG.
+
+2.5. Mensajes de conexión de usuario en la consola. Captura Adjunta: 2.5.JPG.
+
+2.7. Prueba de formulario. Capturas adjuntas:
+	- Formulario: 2.7.1.JPG
+	- Consola: 2.7.2.JPG
+
+2.12. Captura Adjunta: 2.12.JPG.
+
+2.13. Envio de formulario y registro mostrado en ambas pantallas. Captura adjunta: 2.13.JPG.
+
+2.14. Registro en la base de datos. Captura adjunta: 2.14.JPG.
+
+3.4. Captura adjunta: 3.4.JPG.
+
+3.5. El registro se duplica en los demas navegadores, cada que se recarga en uno, sin embargo, solo existe un registro en la base de datos, por lo que parte de nuestro código esta provocando que este error en el listado de los registros.
+
+3.7. Error en listado arreglado. Captura adjunta: 3.7.JPG.
+
+4.6. Capturas adjuntas:
+	- Registro seleccionado: 4.6.1.JPG
+	- Editando formulario: 4.6.2.JPG.
+	- Registro editado: 4.6.3.JPG.
+
+5.5. Eliminación de registro:
+	- Mensaje de alerta: 5.5.1.JPG.
+	- Registro eliminado: 5.5.2.JPG.
+
+Tarea:
+	- Alerta de registro modificado: 
+		- server.js. Captura adjunta: Tarea 1.1.JPG
+		- app.js. Captura adjunta: Tarea 1.2.JPG
+	- Registro nuevo o modificado con texto parpadeante:
+		- app.js. Función blinker: Captura adjunta: Tarea 2.1.JPG
+		- app.js. Evento nuevo: Captura adjunta: Tarea 2.2.JPG
+	- Combobox:
+		- Archivos modificados:
+			- app.js
+			- user.js
+			- main.js
+		- Captura adjunta: Tarea 3.JPG
+
+Conclusiones:
+-	En este laboratorio aprendimos a implementar conexiones persistentes haciendo uso de
+	Socket.io y JQuery para actualizar la página en tiempo sin tener la necesidad de recargar
+	la página.
+-	Después de realizar una inserción o modificación a la base datos, el io o socket envia un
+	mensaje para poder realizar una acción que involucra modificar parte del contenido de la
+	página para que este esté actualizado.
+-	Cuando utilizamos la variable función emit en el socket, esto indica que lo que suceda
+	solo afecta a esa conexión, sin embargo, al utilizar el emit en io, esto afectará a todas las
+	conexiones, por esto en el caso de que se actualice o inserte un nuevo registro utilizamos
+	io.emit, para que se actualicen todas las conexiones.
+-	Por defecto sabemos que existen los eventos de connection y disconnect, para saber
+	si alguien ha accedido a la página o se ha desconectado.
+-	Los eventos son capturados en el app.js en el cual utilizamos socket.on, para realizar
+	diversas funciones, aqui manejamos, utilizando jquery, la modificación dinámica de la
+	página.
+-	Para la conexión a la base de datos utilizamos mongoose y desarrollamos un esquema de
+	usuario, con sus respectivas funciones de CRUD.
+-	Desarrollamos el CRUD completo de una colección en una sola página web, sin la
+	necesidad de recargar la página y avisando a las demás conexiones cada vez que se
+	realizó una modificación a la base de datos.
+-	Finalmente con lo aprendido en el laboratorio, agregamos la alertas a los usuarios de las
+	modificaciones dinámicas del listado con mensajes y registros animados.
+
+
+
+
