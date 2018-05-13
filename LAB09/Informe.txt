@@ -14,4 +14,22 @@ Grupo: B
 
 5.6. Captura Adjunta: 5.6.png
 
-Tarea
+Tarea:
+
+- Código: 
+	"lab09\src\components\Calculadora"
+
+- Capturas adjuntas:
+	- Tarea1.png
+	- Tarea2.png
+	- Tarea3.png
+	- Tarea4.png
+
+Conclusiones:
+	-
+	-
+	-
+	-
+	-
+	-
+	-

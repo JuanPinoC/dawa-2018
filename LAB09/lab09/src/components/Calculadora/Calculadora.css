@@ -1,16 +1,23 @@
 .Calculadora{
-	width: 460px;
+	width: 520px;
+	height: 480px;
 	background-color: black;
-	padding: 15px;
-	margin: 15px;
+	padding: 20px;
+	margin: 20px;
 	border-radius: 25px;
 }
 
 .Pantalla{
-	width: 400px;
-	height: 60px;
+	width: 450px;
+	height: 40px;
 	background-color: white;
 	padding: 15px;
 	margin: 15px;
+	margin-bottom: 25px;
 	border-radius: 25px;
+	overflow: auto;
+}
+
+.Teclado {
+	
 }

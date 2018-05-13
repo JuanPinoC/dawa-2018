@@ -1,0 +1,33 @@
+.Btn{
+	padding: 10px;
+	margin: 10px;
+	width: 70px;
+	height: 50px;
+	text-align: center;
+	transition-duration: 0.4s;
+	border: 10px solid black;
+	border-radius: 25px;
+}
+
+.Btn:active{
+	background-color: white;
+	color: black;
+}
+
+.BtnOperacion{
+	background-color: lightblue;
+}
+
+.BtnOperacion:hover{
+	background-color: blue;
+	color: white;
+}
+
+.BtnNumero{
+	background-color: pink;
+}
+
+.BtnNumero:hover{
+	background-color: red;
+	color: white;
+}
