@@ -1,0 +1,17 @@
+Desarrollo de Aplicaciones Web Avanzado 
+Laboratorio 10
+
+Alumno: Pino Cáceres, Juan Manuel
+Grupo: B
+
+3.8. Captura Adjunta: 3.8.png
+
+4.7. Capturas Adjuntas: 
+	- 4.7 - Inicio.png
+	- 4.7 - Posts.png
+	- 4.7 - New Post.png
+
+Tarea:
+
+
+Conclusiones:
