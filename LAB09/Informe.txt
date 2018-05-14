@@ -1,7 +1,7 @@
 Desarrollo de Aplicaciones Web Avanzado 
 Laboratorio 09
 
-Alumno: Pino C�ceres, Juan Manuel
+Alumno: Pino Cáceres, Juan Manuel
 Grupo: B
 
 2.3. Captura Adjunta: 2.3.png
@@ -16,7 +16,7 @@ Grupo: B
 
 Tarea:
 
-- C�digo: 
+- Código: 
 	"lab09\src\components\Calculadora"
 
 - Capturas adjuntas:
@@ -26,10 +26,10 @@ Tarea:
 	- Tarea4.png
 
 Conclusiones:
-	-
-	-
-	-
-	-
-	-
-	-
-	-
+	- Cuando realizamos la división en componentes de nuestra aplicación hay que evaluar si se necesita crear una nueva clase que extienda de componente que tenga estado y comportamiento o si no requiere mas de returnar un elemento para ser renderizado.
+	- Es posible enviar atributos a los componentes con agregarlos en la etiqueta del mismo y su valor entre llaves, el componente puede acceder a sus propiedades mediante "this.props.atributo".
+	- Un componente puede tener varias funciones y variar de estado además de renderizar un conjunto de etiquetas con ciertos estilos que también pueden ser importados desde un css.
+	-Para establecer el estado inicial de un componente definimos sus atributos dentro de "state" y cuando deseamos acceder a estos atributos utilizamos "this.state.atributo".
+	-Para modificar el estado de un componente utilizamos la función setState() y enviamos los nuevos valores de los atributos.
+	-Las funciones dentro de un componente se pueden asignar como eventos, por ejemplo, en "onClick={this.funcion}", pero es importante resaltar que la función se escribe sin parentesis al final.
+	- En este laboratorio conocimos los componentes de react y su filosofía de diseño más a fondo, además desarrollamos diversos ejercicios.
