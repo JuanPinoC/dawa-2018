@@ -11,7 +11,31 @@ Grupo: B
 	- 4.7 - Posts.png
 	- 4.7 - New Post.png
 
-Tarea:
-
-
 Conclusiones:
+- En este laboratorio aprendimos a trabajar con las fases de ciclo de vida 
+	de un componente a través de un ejemplo de implementación con una página
+	sencilla que nos permite mostrar una homepage, un conjunto de posts y un
+	formulario para crear un post como ejemplo(no funcional).
+- Como se indica al inicio del informe el ciclo de vida de un componente se
+	divide en 3 fases: montado, actualización y desmontado del componente.
+- El montado posee los métodos: constructor, componentWillMount, render y 
+	componentDidMount.
+- La actualización posee los métodos: componentWillReceiveProps, 
+	shouldComponentUpdate, componentWillUpdate, render y componentDidUpdate.
+- El desmontado consiste solo en el método compoenetWillUnmount.
+- En algunos métodos se hace enfasis en que deben ser puros, es decir, no deben
+	modificarse propiedades debido a que esto podria causar un bucle infinito en
+	el ciclo, tal es el caso de render y shouldComponentUpdate.
+- Para tener contenido de ejemplo que mostrar en la página de ejemplo utilizamos
+	la API para testeo y prototipado JSONPlaceholder y colocamos los posts devueltos
+	en un listado.
+- Para poder cambiar entre componentes fue necesario importar BrowserRouter, Route, 
+	NavLink y Switch de react-reouter-dom, después de instalar react-dom, 
+	react-router y react-router-dom.
+- En App.js utilizamos Navlink para cambiar la URL de la página y dentro de Switch
+	se encuentran diferentes Routes que de acuerdo a la URL muestran un componente
+	distinto, por otro lado, para redirigir a una URL diferente utilizamos
+	Redirect.
+- Es importante destacar además que al trabajar de esta forma, no se recarga la
+	toda la página sino que simplemente se recarga el componente requerido, está
+	forma de cambiar de interfaz es mucho más rápida y ordenada.
