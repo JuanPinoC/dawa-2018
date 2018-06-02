@@ -1,0 +1,33 @@
+Desarrollo de Aplicaciones Web Avanzado 
+Laboratorio 11
+
+Alumno: Pino Cáceres, Juan Manuel
+Grupo: B
+
+Conclusiones:
+
+-	En este laboratorio aprendimos acerca de los elementos que normalmente
+	encontramos en los proyectos de React, como la carpeta hoc(High Order 
+	Components), la cual posee dentro componentes que contienen la
+	funcionalidad básica del proyecto y engloban los demás componentes.
+
+-	Organizamos varios elementos consecutivamente dentro de un componente
+	sin la necesidad de englobarlos todos utilizando una etiqueta de inicio
+	y fin.
+
+-	Utilizamos axios para obtener un conjunto de posts y acceder a cada
+	uno desde los demás archivos, esto utilizando los posts de la página
+	jsonplaceholder, utilizamos la función axios.create con la url y
+	creamos la instancia de datos a la que accedemos.
+
+-	Para obtener un post en específico utilizamos get, para cambiar la ruta
+	asignada a la constante en un inicio; para insertar información utilizamos la función post de axios y enviamos la información.
+
+-	Creamos un componente animado con estilos CSS para que se muestre
+	mientras se cargan los elementos de la página y hacer más amigable la
+	interfaz de esta forma.
+
+-	Con el comando "npm run build" creamos la versión de nuestro proyecto
+	que contiene un archivo javascript y uno CSS, para que sea posible
+	incluir nuestro proyecto en un servidor sin importar el lenguaje o
+	versión como se menciona en el laboratorio.
