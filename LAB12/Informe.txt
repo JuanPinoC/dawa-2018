@@ -1,5 +1,5 @@
-Desarrollo de Aplicaciones Web Avanzado 
-Laboratorio 12
+﻿Desarrollo de Aplicaciones Web Avanzado 
+Laboratorio 12 
 
 Alumno: Pino Cáceres, Juan Manuel
 Grupo: B
