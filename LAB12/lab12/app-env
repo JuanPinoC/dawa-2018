@@ -1,0 +1,1 @@
+export JWT_SECRET="dawa_2018_secret"

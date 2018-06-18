@@ -1,0 +1,56 @@
+Desarrollo de Aplicaciones Web Avanzado 
+Laboratorio 12
+
+Alumno: Pino Cáceres, Juan Manuel
+Grupo: B
+
+3.5. Captura Adjunta: 3.5.PNG.
+
+7.12. Funcionamiento:
+	
+	Creación de usuario: CrearUsuario.PNG
+	
+	Home: Home.PNG
+
+	Formulario Login: 
+		- FormularioLogin.PNG
+		- FormularioLogin2.PNG
+		- FormularioLogin3.PNG
+	
+	Usuario Logeado: UserLogged.PNG
+	
+	Información Guardada: LocalStorage.PNG
+	Información con el Token: InfoUsuario.PNG
+	
+	Errores:
+		- Error - jwt malformed.PNG (token incorrecto)
+		- Error - register Log in.PNG (acceder sin enviar token)
+		- Error - invalid signature.PNG (token modificado)
+
+Conclusiones:
+
+	- En este laboratorio implementamos nuestros conocimientos previos en
+		express y react para desarrollar una API que accede a MongoDB y
+		la conectamos a la interfaz de navegador de react para poder
+		iniciar sesión y verificar los datos de sesión.
+	- Para la API utilizamos mongoose y express, en esta creamos el modelo,
+		el controlador y enrutador para Usuarios, para de esta manera,
+		tener el crud de usuarios y permitirles iniciar sesión.
+	- Para la autenticación de usuarios y con el fin de no exponer los datos
+		sensibles utilizamos Json Web Tokens, para enviar al navegador solo un
+		token con la información cifrada pero imposible de acceder si no se
+		tiene el "secret" para descifrarla.
+	- El secret como variable de entorno es importante mantenerla separada del
+		código del proyecto y acceder a ella desde otros archivos, para esto
+		creamos el archivo app-env, que además agregamos al archivo .gitignore
+		para que este archivo no sea divulgado.
+	- En la API validamos el usuario y contraseña recibidos antes de proporcionar
+		el token.
+	- Por el lado del frontend, creamos un componente formulario que nos permite
+		validar si los campos estan llenos o no y dea cuerdo a esto habilitar el
+		botón de submit.
+	- Al recibir el token de verificación almacenamos este en el localStorage
+		para poder acceder a el cada que sea necesario y de esta manera manejar
+		la sesión del usuario, además accedimos a la información del usuario enviando el JWT a la API.
+	- Utilizamos POSTMAN para probar el funcionamiento completo de la API, asi
+		como para obtener los diversos errores al enviar información incorrecta.
